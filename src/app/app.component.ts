@@ -11,6 +11,7 @@ export class AppComponent {
   nomap =  ' Adriana Marcela Cortes Vela ' ;
   correo =  ' adrianam-cortesv@unilibre.edu.co ' ;
   Quimicos:any = [
+    {nombre: 'Nombre elemento', simbolo: 'Simbolo', numero : 'Numero atomico', peso: 'Peso atomico', metal: 3, categoria:'Categoria'},
     {nombre: ' Titanio ' ,    simbolo: ' Ti ' ,   numero: 22 ,  peso: 47.867 ,  metal: 1 ,  categoria: ' alcalino ' },
     {nombre: ' Calcio ' ,     simbolo: ' Ca ' ,   numero: 20 ,  peso: 40.078 ,  metal: 2 ,  categoria: ' gas noble ' },
     {nombre: ' Litio ' ,      simbolo: ' Li ' ,   numero: 3 ,   peso: 6.94 ,    metal: 1 ,  categoria: ' gas noble ' },
