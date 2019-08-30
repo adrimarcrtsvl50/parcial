@@ -1,0 +1,32 @@
+*{
+    text-align: center;
+}
+
+th{
+    width: 100px;
+    background-color: rgb(104, 104, 104);
+    color: rgb(236, 230, 230);
+}
+
+.especial{
+    width: 200px;
+}
+table{
+    border-radius: 15px;
+}
+
+.welcome{
+    margin: 5%;
+    color: rgb(189, 118, 185);
+}
+
+.my_table{
+    margin: auto;
+}
+.alc_quimico{
+    background-color: rgb(7, 146, 7);
+}
+
+.gas_quimico{
+    background-color: rgb(18, 20, 112);
+}

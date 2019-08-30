@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="welcome">
   <h1>
     Welcome to {{ title }}!
     <br>
@@ -8,24 +8,43 @@
     <br>
     Correo: {{correo}} 
     <br>
-    <br>
-    
+    <h2>Tabla Periodica</h2>
   </h1>
-  <img width="800" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Periodic_table_large-es-updated-2018.svg/500px-Periodic_table_large-es-updated-2018.svg.png">
+  <img width="500" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Periodic_table_large-es-updated-2018.svg/500px-Periodic_table_large-es-updated-2018.svg.png">
 </div>
 <br>
-<br>
-<div style="text-align:center;">
-<table border="1" style="margin: 0 auto;">
-  <tr *ngFor="let fila of Quimicos, let i = index" [ngSwitch]="fila.metal">
-    <td [ngStyle]="{color: fila.categoria=='alcalino' ? 'green' : 'blue'}">{{fila.nombre}}</td>
-    <td>{{fila.simbolo}}</td>
-    <td>{{fila.numero}}</td>
-    <td>{{fila.peso}}</td>
-    
-  </tr>
-</table>
+<div >
+<table class="my_table">
+    <tr>
+        <th>Nombre elemento</th>
+        <th class="especial">Simbolo</th>
+        <th>Numero atomico</th>
+        <th>Peso atomico</th>
+        <th>Metal</th>
+        <th>Categoria</th>
+    </tr>
+    <tr *ngFor="let fila of Quimicos;" 
+        [ngClass]="{'alc_quimico':  fila.categoria =='alcalino', 'gas_quimico': fila.categoria ==' gas noble'}">
+      <td>{{fila.nombre}}</td>
+      <td>{{fila.simbolo}}</td>
+      <td>{{fila.numero}}</td>
+      <td>{{fila.peso}}</td>
+      <td [ngSwitch]="fila.metal">
+        <span *ngSwitchCase=1>Si</span>
+        <span *ngSwitchCase=2>No</span>
+      </td>
+      <td>{{fila.categoria}}</td>
+    <!--
+
+        
+        [ngClass]="{gas_quimico: fila.categoria=='gas noble'}"
+
+        [ngClass]="{colorsitos: (i + 1) % 2 !=0}"
+      -->
+    </tr>
+  </table>
 </div>
+
 <router-outlet></router-outlet>
 
 
