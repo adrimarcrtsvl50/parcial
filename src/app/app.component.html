@@ -10,7 +10,7 @@
     <h2>Tabla Periódica</h2>
 <table border="5" style = " margin : 0  auto;"> 
   <tr *ngFor="let fila of Quimicos, let i = index" >
-    <td [ngStyle]="{color: fila.categoria=='alcalino' ? 'green' : 'blue'}">{{fila.nombre}}</td>
+    <td [ngStyle]="{color: fila.categoria=='alcalino' ? 'green' : 'blue' }">{{fila.nombre}}</td>
     <td>{{fila.simbolo}}</td>
     <td>{{fila.numero}}</td>
     <td>{{fila.peso}}</td>
@@ -18,6 +18,7 @@
         <span *ngSwitchCase=1>Si</span>
         <span *ngSwitchCase=2>No</span>
         <span *ngSwitchCase=3>Metal de transicion</span>
+        <span *ngSwitchCase=4>No tiene</span>
       </td>
     <td>{{fila.categoria}}</td>
   </tr>
