@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'parcial2808-AdrianaCortes'`, () => {
+  it(`should have as title 'Parcial2808'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('parcial2808-AdrianaCortes');
+    expect(app.title).toEqual('Parcial2808');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to parcial2808-AdrianaCortes!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Parcial2808!');
   });
 });

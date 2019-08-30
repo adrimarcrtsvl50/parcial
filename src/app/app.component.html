@@ -1,34 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="welcome">
   <h1>
-    Welcome to {{ title }}!
-    <br>
-    <br>
-    {{nomap}}! 
-    <br>
-    Correo: {{correo}} 
-    <br>
-    <h2>Tabla Periodica</h2>
+    {{ title }}!<br>
+    Correo : {{correo}}
   </h1>
-  <img width="500" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Periodic_table_large-es-updated-2018.svg/500px-Periodic_table_large-es-updated-2018.svg.png">
+  <img width="500" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Periodic_table_large-es-updated-2018.svg/500px-Periodic_table_large- es-updated-2018.svg.png">
 </div>
-<br>
 <div style="text-align:center;">
-    <table border="1"style="margin: 0 auto;">
-      <tr *ngFor="let fila of Quimicos, let i = index" [ngSwitch]="fila.metal">
-        <td [ngStyle]="{color: fila.categoria==='alcalino' ? 'green' : 'blue'}">{{fila.nombre}}</td>
-        <td>{{fila.simbolo}}</td>
-        <td>{{fila.numero}}</td>
-        <td>{{fila.peso}}</td>
-        <td><span *ngSwitchCase=1>Si</span>
-            <span *ngSwitchCase=2>No</span>
-            <span *ngSwitchCase=3>Metal de transicion</span></td>
-        <td>{{fila.categoria}}</td>
-      </tr>
-    </table>
+    <h2>Tabla Periódica</h2>
+<table border="5" style = " margin : 0  auto;"> 
+  <tr *ngFor="let fila of Quimicos, let i = index" >
+    <td [ngStyle]="{color: fila.categoria=='alcalino' ? 'green' : 'blue'}">{{fila.nombre}}</td>
+    <td>{{fila.simbolo}}</td>
+    <td>{{fila.numero}}</td>
+    <td>{{fila.peso}}</td>
+    <td [ngSwitch]="fila.metal">
+        <span *ngSwitchCase=1>Si</span>
+        <span *ngSwitchCase=2>No</span>
+        <span *ngSwitchCase=3>Metal de transicion</span>
+      </td>
+    <td>{{fila.categoria}}</td>
+  </tr>
+</table>
 </div>
 <router-outlet></router-outlet>
-
-
-
-

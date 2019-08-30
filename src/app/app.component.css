@@ -3,16 +3,5 @@
 }
 .welcome{
     margin: 5%;
-    color: rgba(61, 5, 61, 0.925);
-}
-
-.my_table{
-    margin: auto;
-}
-.alc_quimico{
-    background-color: rgb(7, 146, 7);
-}
-
-.gas_quimico{
-    background-color: rgb(18, 20, 112);
+    color: rgb(100, 23, 131);
 }
